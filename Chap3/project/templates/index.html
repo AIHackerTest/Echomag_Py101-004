@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>天气查询系统</title>
+  </head>
+  <body>
+    <h1 align="CENTER">天气查询系统</h1>
+    <HR SIZE="1" WIDTH="50%">
+    <div align="CENTER">
+    <img src="{{url_for('static', filename='picture.jpg')}}" alt="天气图片" width="400" height="350">
+
+    <form class="" action="/user_request" method="get">
+      城市:<input type="text" name="city"><br>
+      <input type="submit" name="query" value="查询">
+      <input type="submit" name="history" value="历史">
+      <input type="submit" name="help" value="帮助">
+      </form>
+    </div>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
